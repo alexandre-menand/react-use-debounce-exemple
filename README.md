@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# 🔍 **Debounce Search Demo with React & TypeScript**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une démonstration interactive pour illustrer l'impact du *debounce* sur les requêtes API dans un champ de recherche avec autocomplétion. Ce projet utilise **Vite, React et TypeScript** pour une implémentation légère et performante.
 
-Currently, two official plugins are available:
+**[🔗 Lien vers la démo](http://)** *(à compléter)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 **Fonctionnalités**
+- **Champ de recherche dynamique** avec autocomplétion.
+- **Comparaison en temps réel** du nombre de requêtes API :
+    - **Sans *debounce*** : Une requête par caractère tapé.
+    - **Avec *debounce*** : Une requête après un délai d'inactivité (300ms par défaut).
+- **Hook `useDebounce` réutilisable** pour tout projet React/TypeScript.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 **Technologies utilisées**
+   Outil/Technologie | Version/Rôle |
+ |-------------------|-------------|
+| **Vite**          | Outil de build ultra-rapide pour le développement frontend. |
+| **React**         | Bibliothèque JavaScript pour les interfaces utilisateur. |
+| **TypeScript**    | Typage statique pour un code plus robuste. |
+| **useDebounce**   | Hook personnalisé pour optimiser les requêtes API. |
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 **Installation et exécution**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prérequis
+- Node.js (v22 ou supérieur)
+- npm ou yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Projet externe 
+- Utilisation de l'API https://fakestoreapi.com/
