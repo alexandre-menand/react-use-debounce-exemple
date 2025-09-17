@@ -2,7 +2,7 @@
 
 Une démonstration interactive pour illustrer l'impact du *debounce* sur les requêtes API dans un champ de recherche avec autocomplétion. Ce projet utilise **Vite, React et TypeScript** pour une implémentation légère et performante.
 
-**[🔗 Lien vers la démo](http://)** *(à compléter)*
+**[🔗 Lien vers la démo](https://react-use-debounce-exemple.vercel.app/)** *(à compléter)*
 
 ---
 
